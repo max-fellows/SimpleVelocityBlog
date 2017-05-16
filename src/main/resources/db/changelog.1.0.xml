@@ -28,11 +28,11 @@
     <createTable tableName="user_roles">
       <column name="user_id" type="int">
         <constraints primaryKey="true" nullable="false" referencedTableName="users"
-          referencedColumnNames="id"/>
+          referencedColumnNames="id" foreignKeyName="fk_user_roles_users"/>
       </column>
       <column name="role_name" type="varchar">
         <constraints primaryKey="true" nullable="false" referencedTableName="roles"
-          referencedColumnNames="role_name"/>
+          referencedColumnNames="role_name" foreignKeyName="fk_role_name_roles"/>
       </column>
     </createTable>
   </changeSet>
