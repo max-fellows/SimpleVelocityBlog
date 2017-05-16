@@ -1,0 +1,13 @@
+<html>
+<body>
+Hello, world!
+$foo
+
+<form method="post">
+<input type="text" name="foo" />
+<input type="submit" />
+</form>
+  </tbody>
+</table>
+</body>
+</html>
