@@ -26,9 +26,9 @@
       </column>
     </createTable>
     <createTable tableName="user_roles">
-      <column name="user_id" type="int">
+      <column name="username" type="varchar">
         <constraints primaryKey="true" nullable="false" referencedTableName="users"
-          referencedColumnNames="id" foreignKeyName="fk_user_roles_users"/>
+          referencedColumnNames="username" foreignKeyName="fk_user_roles_users"/>
       </column>
       <column name="role_name" type="varchar">
         <constraints primaryKey="true" nullable="false" referencedTableName="roles"
