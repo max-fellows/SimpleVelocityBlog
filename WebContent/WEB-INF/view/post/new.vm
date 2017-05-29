@@ -1,5 +1,14 @@
 <html>
 <body>
-Hello, world!
+#if ($post.id == -1)
+<h1>Create new post</h1>
+#else
+<h1>Post ID $post.id</h1>
+#end
+<form method="POST">
+<label id="lblTitle"/><input type="text" name="title" value="$post.title"/>
+<label id="lblContents"/><input type="text" name="contents" value="$post.contents"/>
+<input type="submit"/>
+</form>
 </body>
 </html>
