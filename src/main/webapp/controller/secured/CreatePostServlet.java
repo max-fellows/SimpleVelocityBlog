@@ -18,13 +18,15 @@ import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
 
 import main.java.entity.Post;
+import main.java.service.PostService;
 
 @WebServlet("/post")
-@ServletSecurity(@HttpConstraint(rolesAllowed = "admin"))
+@ServletSecurity(@HttpConstraint(rolesAllowed="admin"))
 public class CreatePostServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 	@Inject private VelocityEngine velocity;
+	@Inject private PostService postService;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		VelocityContext ctx = new VelocityContext();
@@ -48,16 +50,8 @@ public class CreatePostServlet extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		post.setId(1000);
-		
-		VelocityContext ctx = new VelocityContext();
-		ctx.put("post", post);
-		try {
-			Template t = velocity.getTemplate("/post/new.vm");
-			t.merge(ctx, response.getWriter());
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		postService.save(post);
+		response.sendRedirect(request.getContextPath() + "/posts/" + post.getId());
 	}
 
 }

@@ -2,7 +2,7 @@
 <Context>
 <Realm className="org.apache.catalina.realm.JDBCRealm"
        driverName="org.h2.Driver"
-       connectionURL="jdbc:h2:D:\Dev\eclipse\workspace\VelocityJEE7\src\main\resources\testdb"
+       connectionURL="jdbc:h2:D:\Dev\eclipse\workspace\VelocityJEE7\src\main\resources\testdb;USER=admin"
        userTable="users" userNameCol="username" userCredCol="password"
        userRoleTable="user_roles" roleNameCol="role_name"/>
 </Context>

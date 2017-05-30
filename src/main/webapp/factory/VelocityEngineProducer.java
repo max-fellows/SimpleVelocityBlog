@@ -1,4 +1,4 @@
-package main.webapp.velocity;
+package main.webapp.factory;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Produces;

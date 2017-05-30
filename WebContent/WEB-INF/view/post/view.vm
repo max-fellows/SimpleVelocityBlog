@@ -1,5 +1,8 @@
 <html>
 <body>
-Post titled: $blogpost
+id: $post.id
+title: $post.title
+date: $post.dateCreated
+contents: $post.contents
 </body>
 </html>
