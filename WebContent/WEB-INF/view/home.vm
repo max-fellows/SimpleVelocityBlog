@@ -1,13 +1,16 @@
 <html>
+<head>
+<link rel="stylesheet" href="css/styles.css"/>
+</head>
 <body>
+<div>
 Hello, world!
+</div>
 $foo
 
 <form method="post">
 <input type="text" name="foo" />
 <input type="submit" />
 </form>
-  </tbody>
-</table>
 </body>
 </html>

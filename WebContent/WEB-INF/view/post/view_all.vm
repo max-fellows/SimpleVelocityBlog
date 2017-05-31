@@ -1,0 +1,16 @@
+<html>
+<body>
+<table>
+#foreach ($post in $posts)
+<tr>
+<td>
+id: $post.id
+title: $post.title
+date: $post.dateCreated
+contents: $post.contents
+</td>
+</tr>
+#end
+</table>
+</body>
+</html>
